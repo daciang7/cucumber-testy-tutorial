@@ -10,7 +10,15 @@ public class Calc {
     }
 
     public int tatiCatFace(int x, int y) {
-
+        int sum = x;
+        if(y == 0) {
+            return sum;
+        }
         return 0;
+    }
+
+    public static void main(String[] args) {
+        Calc calc = new Calc();
+        System.out.println(calc.tatiCatFace(4, 5));
     }
 }
