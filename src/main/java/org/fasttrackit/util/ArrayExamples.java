@@ -8,6 +8,9 @@ public class ArrayExamples {
 
     public static void main(String[] args) {
         int[] intArr = new int[4];
-        intArr[4] = 123;
+        intArr[3] = 123;
+        int intArr2[] = {1, 2, 3};
+        int [][] matrix = new int[3][4];
+        matrix[2][2] = 2;
     }
 }
