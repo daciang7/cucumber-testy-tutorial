@@ -12,9 +12,7 @@ public class Calc {
     public int tatiCatFace(int x, int y) {
         int sum = x;
         System.out.println("Starting with " + sum);
-        if (y == 0) {
-            return sum;
-        } else {
+        while(y != 0) {
             System.out.print("Adding 1 to sum " + sum);
             sum = sum + 1;
             System.out.println(" becomes " + sum);
@@ -25,6 +23,6 @@ public class Calc {
 
     public static void main(String[] args) {
         Calc calc = new Calc();
-        System.out.println(calc.tatiCatFace(4, 5));
+        System.out.println("Sum is: " + calc.tatiCatFace(4, 5));
     }
 }
