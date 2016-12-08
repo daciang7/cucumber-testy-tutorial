@@ -1,5 +1,7 @@
 package org.fasttrackit.util;
 
+import java.util.Scanner;
+
 /**
  * @author flo
  * @since 08/12/2016.
@@ -29,7 +31,27 @@ public class Calc {
     }
 
     public static void main(String[] args) {
+        System.out.println("Read X:");
+        int x = readIntFromConsole();
+        System.out.println("Read Y:");
+        int y = readIntFromConsole();
+
         Calc calc = new Calc();
-        System.out.println("Sum is: " + calc.tatiCatFace(40000000, 10));
+        System.out.println("Sum is: " + calc.tatiCatFace(x, y));
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public static int readIntFromConsole() {
+        return Integer.valueOf(new Scanner(System.in).nextLine());
     }
 }
