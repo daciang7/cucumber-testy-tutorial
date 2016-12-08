@@ -12,17 +12,17 @@ public class Calc {
     public int tatiCatFace(int x, int y) {
         int sum = x;
         System.out.println("Starting with " + sum);
-        do {
+        for(int i = 0; i < y; i++) {
             System.out.print("Adding 1 to sum " + sum);
             sum = sum + 1;
             System.out.println(" becomes " + sum);
             y = y - 1;
-        } while(y >= 0);
+        }
         return sum;
     }
 
     public static void main(String[] args) {
         Calc calc = new Calc();
-        System.out.println("Sum is: " + calc.tatiCatFace(4, 0));
+        System.out.println("Sum is: " + calc.tatiCatFace(4, 1));
     }
 }
