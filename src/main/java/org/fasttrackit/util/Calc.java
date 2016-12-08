@@ -11,10 +11,16 @@ public class Calc {
 
     public int tatiCatFace(int x, int y) {
         int sum = x;
-        if(y == 0) {
+        System.out.println("Starting with " + sum);
+        if (y == 0) {
             return sum;
+        } else {
+            System.out.print("Adding 1 to sum " + sum);
+            sum = sum + 1;
+            System.out.println(" becomes " + sum);
+            y = y - 1;
         }
-        return 0;
+        return sum;
     }
 
     public static void main(String[] args) {
