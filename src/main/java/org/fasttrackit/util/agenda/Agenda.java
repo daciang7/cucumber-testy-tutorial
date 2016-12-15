@@ -28,6 +28,25 @@ public class Agenda {
                 agenda[index] = newName;
                 index++;
             }
+            if(option == 2) {
+                System.out.println("Give me an existing name:");
+                String existingName = Calc.readStringFromConsole();
+                int indexOfExistingName = 0;
+                while(indexOfExistingName < index) {
+                    if(existingName.equals(agenda[indexOfExistingName])) {
+                        System.out.println("Found " + existingName + " give me a new one:");
+                        String newName = Calc.readStringFromConsole();
+                        agenda[indexOfExistingName] = newName;
+                        break;
+                    }
+                    indexOfExistingName++;
+                }
+                if(indexOfExistingName == index) {
+                    System.out.println("Can't find " + existingName);
+                }
+
+
+            }
             if(option == 5) {
                 System.out.println("All names from agenda:");
                 for(int i = 0; i < index ; i++) {
