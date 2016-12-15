@@ -5,4 +5,8 @@ package org.fasttrackit.util;
  * @since 15/12/2016.
  */
 public class Idea {
+
+//    public Idea() {
+//
+//    }
 }

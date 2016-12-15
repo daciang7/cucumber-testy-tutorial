@@ -6,7 +6,9 @@ package org.fasttrackit.util;
  */
 public class PersonExample {
     public static void main(String[] args) {
+        new Idea();
         Person person = new Person("ion");
+        person.setGender('M');
         Person person2 = new Person("maria","marinescu");
 
         System.out.println(person.talk() + "|" + person.getLastName() + "|"  + person.getGender());

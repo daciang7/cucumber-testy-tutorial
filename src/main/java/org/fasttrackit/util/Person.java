@@ -22,6 +22,7 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     //behavior
     public String getFirstName() {
         return firstName;
