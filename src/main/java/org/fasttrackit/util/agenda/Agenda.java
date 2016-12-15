@@ -10,6 +10,8 @@ public class Agenda {
 
     public static void main(String[] args) {
 
+        String[] agenda = new String[10];
+
         int option;
         do {
             System.out.println("1-Create");
@@ -17,6 +19,7 @@ public class Agenda {
             System.out.print("3-DeleteByName | 4 - searchByName |");
             System.out.println(" 5 - printAll");
             System.out.println("9 - Exit");
+
             option = Calc.readIntFromConsole();
 
         } while(option != 9);

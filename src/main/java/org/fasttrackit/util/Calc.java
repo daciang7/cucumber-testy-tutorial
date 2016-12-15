@@ -54,4 +54,8 @@ public class Calc {
     public static int readIntFromConsole() {
         return Integer.valueOf(new Scanner(System.in).nextLine());
     }
+
+    public static String readStringFromConsole() {
+        return new Scanner(System.in).nextLine();
+    }
 }
