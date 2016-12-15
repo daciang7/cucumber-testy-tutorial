@@ -22,6 +22,13 @@ public class Agenda {
 
             option = Calc.readIntFromConsole();
 
+            if(option == 1) {
+                System.out.println("Give me a name:");
+                String newName = Calc.readStringFromConsole();
+                agenda[0] = newName;
+                // this will overwrite the previous name
+            }
+
         } while(option != 9);
 
     }

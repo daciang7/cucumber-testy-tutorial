@@ -52,7 +52,7 @@ public class Calc {
 
 
     public static int readIntFromConsole() {
-        return Integer.valueOf(new Scanner(System.in).nextLine());
+        return Integer.valueOf(readStringFromConsole());
     }
 
     public static String readStringFromConsole() {
