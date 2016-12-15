@@ -28,6 +28,12 @@ public class Agenda {
                 agenda[index] = newName;
                 index++;
             }
+            if(option == 5) {
+                System.out.println("All names from agenda:");
+                for(int i = 0; i < index ; i++) {
+                    System.out.println(agenda[i]);
+                }
+            }
 
         } while(option != 9);
 
