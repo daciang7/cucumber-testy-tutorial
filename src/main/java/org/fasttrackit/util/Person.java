@@ -1,0 +1,59 @@
+package org.fasttrackit.util;
+
+import java.util.Date;
+
+/**
+ * @author flo
+ * @since 15/12/2016.
+ */
+public class Person {
+    // state
+    private String firstName;
+    private String lastName;
+    private char gender;
+    private Date dateOfBirth;
+
+    //behavior
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    private Idea think() {
+        // do the thinking
+        return new Idea();
+    }
+
+    private String verbalise(Idea idea) {
+        return idea.toString();
+    }
+
+    public String talk() {
+        Idea idea = think();
+        return verbalise(idea);
+    }
+
+    public char getGender() {
+        return gender;
+    }
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+}
