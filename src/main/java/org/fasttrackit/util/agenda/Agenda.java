@@ -11,7 +11,7 @@ public class Agenda {
     public static void main(String[] args) {
 
         String[] agenda = new String[10];
-
+        int index = 0;
         int option;
         do {
             System.out.println("1-Create");
@@ -25,8 +25,8 @@ public class Agenda {
             if(option == 1) {
                 System.out.println("Give me a name:");
                 String newName = Calc.readStringFromConsole();
-                agenda[0] = newName;
-                // this will overwrite the previous name
+                agenda[index] = newName;
+                index++;
             }
 
         } while(option != 9);
