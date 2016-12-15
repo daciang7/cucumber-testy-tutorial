@@ -13,6 +13,15 @@ public class Person {
     private char gender;
     private Date dateOfBirth;
 
+    public Person(String firstName) {
+        this.firstName = firstName;
+        this.lastName = "Pop";
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
     //behavior
     public String getFirstName() {
         return firstName;
@@ -34,7 +43,7 @@ public class Person {
     }
 
     private String verbalise(Idea idea) {
-        return idea.toString();
+        return firstName + idea.toString();
     }
 
     public String talk() {

@@ -6,7 +6,11 @@ package org.fasttrackit.util;
  */
 public class PersonExample {
     public static void main(String[] args) {
-        Person person = new Person();
+        Person person = new Person("ion");
+        Person person2 = new Person("maria","marinescu");
+
+        System.out.println(person.talk() + "|" + person.getLastName() + "|"  + person.getGender());
+        System.out.println(person2.talk() + "|" + person2.getLastName());
 
         System.out.println(person.talk());
     }
