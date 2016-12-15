@@ -6,6 +6,10 @@ package org.fasttrackit.util;
  */
 public class PersonExample {
     public static void main(String[] args) {
+        System.out.println(Person.getNoOfPerson());
+        //don't do this
+        new Person("asd").getNoOfPerson();
+
         new Idea();
         Person person = new Person("ion");
         person.setGender('M');

@@ -7,6 +7,11 @@ import java.util.Date;
  * @since 15/12/2016.
  */
 public class Person {
+    private static int noOfPerson;
+    public static int getNoOfPerson() {
+        return noOfPerson + this.firstName;
+    }
+
     // state
     private String firstName;
     private String lastName;
@@ -49,7 +54,7 @@ public class Person {
 
     public String talk() {
         Idea idea = think();
-        return verbalise(idea);
+        return verbalise(idea) + noOfPerson;
     }
 
     public char getGender() {
