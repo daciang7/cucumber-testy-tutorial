@@ -1,5 +1,8 @@
 package org.fasttrackit.util;
 
+import org.fasttrackit.onlinelibrary.view.LoginView;
+import org.fasttrackit.onlinelibrary.view.*;
+
 import java.util.Date;
 
 /**
@@ -9,7 +12,9 @@ import java.util.Date;
 public class Person {
     private static int noOfPerson;
     public static int getNoOfPerson() {
-        return noOfPerson + this.firstName;
+        new LoginView();
+        new TopMenuNavigationView();
+        return noOfPerson;
     }
 
     // state
