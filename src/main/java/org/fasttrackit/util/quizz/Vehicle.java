@@ -1,5 +1,8 @@
 package org.fasttrackit.util.quizz;
 
+import org.fasttrackit.util.agenda.Agenda;
+import org.openqa.selenium.interactions.touch.MoveAction;
+
 /**
  * @author flo
  * @since 22/12/2016.
@@ -27,6 +30,12 @@ public abstract class Vehicle {
         System.out.println(c.equals(b));
         System.out.println(c.equals("cucurigu"));
 
+        Vehicle asdcasda = new Car(5);
+        Object o = asdcasda;
+        o.toString();
+        asdcasda.honk();
+        Moveable moveable = (Car) asdcasda;
+
 
 //        v.moves();
         c.moves();
@@ -34,7 +43,10 @@ public abstract class Vehicle {
     }
 }
 
-class Car extends Vehicle {
+interface Moveable {
+
+}
+class Car extends Vehicle implements Moveable {
 
     private int id;
 
