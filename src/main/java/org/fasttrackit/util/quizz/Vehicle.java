@@ -34,7 +34,7 @@ public abstract class Vehicle {
         Object o = asdcasda;
         o.toString();
         asdcasda.honk();
-        Moveable moveable = (Car) asdcasda;
+        Moveable moveable =  (Car) asdcasda;
 
 
 //        v.moves();
