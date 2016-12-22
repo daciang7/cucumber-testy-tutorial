@@ -21,4 +21,9 @@ public class Vehicle {
 
 class Car extends Vehicle {
 
+    @Override
+    public void moves() {
+        System.out.println("Car moves");
+        super.moves();
+    }
 }
