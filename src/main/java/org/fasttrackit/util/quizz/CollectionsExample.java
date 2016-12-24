@@ -9,14 +9,15 @@ import java.util.List;
  */
 public class CollectionsExample {
     public static void main(String[] args) {
-        List list = new ArrayList();
+        List<String> list = new ArrayList<>();
         list.add("Jon");
         list.add("Mary");
-        list.add(1);
-        list.add(new Car(4));
+        // this will not compile. One can add only Strings in "list" due to the <String> modifier
+//        list.add(1);
+//        list.add(new Car(4));
         for(Object element : list) {
             System.out.println(element);
         }
-        int i = (int) list.get(2);
+//        int i = (int) list.get(2);
     }
 }
