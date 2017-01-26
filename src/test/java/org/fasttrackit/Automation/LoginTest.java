@@ -69,10 +69,6 @@ public class LoginTest extends TestBase {
         newPasswordField.sendKeys("new.pass");
         repeatPasswordField.sendKeys("new.pass");
     }
-    public void openBrowser(){
-        System.out.println("ready");
-        driver.get(" https://rawgit.com/sdl/Testy/master/src/test/functional/app-demo/login.html ");
-       // driver.get("file :// C:Produse/Testy/src/test/functional/app-demo/login.html");
-    }
+
 
 }
