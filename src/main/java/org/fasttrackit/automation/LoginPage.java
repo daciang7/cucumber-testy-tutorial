@@ -1,12 +1,12 @@
 package org.fasttrackit.automation;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
-    @FindBy(id="email")
+
+    @FindBy(id = "email")
     private WebElement emailField;
-    @FindBy(name="password")
+    @FindBy(name = "password")
     private WebElement passField;
     @FindBy(className = "login-btn")
     private WebElement loginBtn;
@@ -19,5 +19,12 @@ public class LoginPage {
     }
 
 
-
 }
+
+
+
+
+
+
+
+

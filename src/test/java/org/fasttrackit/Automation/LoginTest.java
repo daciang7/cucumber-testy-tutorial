@@ -16,12 +16,11 @@ import static org.hamcrest.Matchers.is;
 
 public class LoginTest extends TestBase {
 
-    private LoginPage loginPage ;
+    private LoginPage loginPage;
 
-    public LoginTest (){
-        loginPage= PageFactory.initElements(driver,LoginPage.class);
+    public LoginTest() {
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
     }
-
 
 
     @Test
@@ -47,27 +46,8 @@ public class LoginTest extends TestBase {
 
         WebElement errorElement = driver.findElement(By.className("error-msg"));
         System.out.println(errorElement.getText());
-        Assert.assertEquals(errorElement.getText(),"Invalid user or password!");
+        Assert.assertEquals(errorElement.getText(), "Invalid user or password!");
         //assertThat(errorElement.getText(),is("Invalid user or password! "));
-    }
-
-    @Test
-    public void changePasswordWithInvalidCurrentPassword(){
-        openBrowser();
-        loginPage.login("eu@fast.com","eu.pass");
-        WebElement preferencesBtn=driver.findElement(By.xpath("//button[@data-target='#preferences-win']"));
-        preferencesBtn.click();
-
-        WebElement currentPasswordField = driver.findElement(By.name("password"));
-        WebElement newPasswordField= driver.findElement(By.name("newPassword"));
-        WebElement repeatPasswordField =driver.findElement(By.name("newPasswordRepeat"));
-
-        Utils.sleep(2000);
-
-
-        currentPasswordField.sendKeys("wrong.pass");
-        newPasswordField.sendKeys("new.pass");
-        repeatPasswordField.sendKeys("new.pass");
     }
 
 
