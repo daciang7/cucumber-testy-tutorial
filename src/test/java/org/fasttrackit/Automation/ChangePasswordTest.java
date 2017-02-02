@@ -38,7 +38,7 @@ public class ChangePasswordTest  extends TestBase {
 
         page.changePassword("eu.pass", "qwerty", "qwerty1");
 
-        assertThat(page.getStatusMessage(),is("Your preview password is incorrect! "));
+        assertThat(page.getStatusMessage(),is("Password does not match the confirm password!"));
     }
     @Test
     public void changePasswordWithAnotherValidPassword() {

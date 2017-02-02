@@ -5,13 +5,13 @@ import org.openqa.selenium.support.FindBy;
 
 
 public class ChangePasswordPage {
-    @FindBy(name= " password" )
+    @FindBy(name= "password" )
      private WebElement currentPasswordField;
     @FindBy( name="newPassword")
      private WebElement newPasswordField;
     @FindBy (name="newPasswordRepeat")
      private WebElement repeatPasswordField;
-    @FindBy (xpath="//'[@id='preferences-win']//button(normalize-space(text))='Save']")
+    @FindBy (xpath="//*[@id='preferences-win']//button[(normalize-space(text()) ='Save')]")
      private WebElement saveBtn;
     @FindBy(className="status-msg")
      private WebElement statusMsg;

@@ -3,6 +3,7 @@ package org.fasttrackit.Automation;
 import com.sdl.selenium.web.utils.Utils;
 import org.apache.xpath.SourceTree;
 import org.fasttrackit.automation.LoginPage;
+import org.fasttrackit.automation.LoginView;
 import org.fasttrackit.util.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -16,19 +17,18 @@ import static org.hamcrest.Matchers.is;
 
 public class LoginTest extends TestBase {
 
-    private LoginPage loginPage;
-
-    public LoginTest() {
-        loginPage = PageFactory.initElements(driver, LoginPage.class);
-    }
+    //private LoginPage page;
+    private LoginView page = new LoginView();
+   // public LoginTest ()
+   //     page = PageFactory.initElements(driver, LoginPage.class);
+   // }
 
 
     @Test
     public void validLoginTest() {
-        System.out.println("ready");
-        driver.get("https://rawgit.com/sdl/Testy/master/src/test/functional/app-demo/login.html");
+        openBrowser();
 
-        loginPage.login("eu@fast.com", "eu.pass");
+        page.login("eu@fast.com", "eu.pass");
 
         try {
             WebElement logoutBtn = driver.findElement(By.linkText("Logout"));
@@ -40,9 +40,9 @@ public class LoginTest extends TestBase {
 
     @Test
     public void invalidLoginTest() {
-
         openBrowser();
-        loginPage.login("eu@fast.com", "eu.pass123");
+
+        page.login("eu@fast.com", "eu.pa9ss");
 
         WebElement errorElement = driver.findElement(By.className("error-msg"));
         System.out.println(errorElement.getText());
