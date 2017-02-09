@@ -11,17 +11,17 @@ import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class LoginTest extends TestBase {
+public class LoginTest1 extends TestBase {
 
-    //private LoginPage page;
+    //private LoginPage1 page1;
     private LoginView page = new LoginView();
-   // public LoginTest ()
+   // public LoginTest1 ()
    //     page = PageFactory.initElements(driver, LoginPage.class);
    // }
 
 
     @Test
-    public void validLoginTest() {
+    public void validLoginTest1() {
         openLoginPage();
 
         page.login("eu@fast.com", "eu.pass");
@@ -35,7 +35,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void invalidLoginTest() {
+    public void invalidLoginTest1() {
         openLoginPage();
 
         page.login("eu@fast.com", "eu.pa9ss");

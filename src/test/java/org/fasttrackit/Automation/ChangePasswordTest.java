@@ -4,11 +4,9 @@ import com.sdl.selenium.web.utils.Utils;
 import org.fasttrackit.automation.ChangePasswordPage;
 import org.fasttrackit.automation.LoginPage;
 import org.fasttrackit.util.TestBase;
-import org.hamcrest.Matcher;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -46,10 +44,11 @@ public class ChangePasswordTest  extends TestBase {
 
         page.changePassword("eu.pass", "qwerty", "qwerty");
 
-        assertThat(page.getStatusMessage(), is("Your password has been successfully changed! "));
+        assertThat(page.getStatusMessage(), is("Your password has been successfully changed!"));
 }
+
     private void openPage(){
-        openBrowser();
+        openLoginPage();
         loginPage.login("eu@fast.com","eu.pass");
         WebElement preferencesBtn = driver.findElement(By.xpath("//button[@data-target='#preferences-win']"));
         preferencesBtn.click();
