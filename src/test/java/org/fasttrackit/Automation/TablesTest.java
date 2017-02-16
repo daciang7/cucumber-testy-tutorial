@@ -10,12 +10,13 @@ import org.fasttrackit.automation.LoginView;
 import org.fasttrackit.util.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TablesTest extends TestBase {
 
 
-    @Test
+    @Test  //testul nu merge din cauza rezolutiei ecranului
     public void selectTableRowTest() {
         openLoginPage();
         loginView.login("eu@fast.com", "eu.pass");
@@ -48,6 +49,30 @@ public class TablesTest extends TestBase {
         checkboxLocator.click();
 
 
+    }
+    @Test
+    public void selectRowByEmailsSetup(){
+    openLoginPage();
+    loginView.login("eu@fast.com","eu.pass");
+    }
+
+    @Test(dependsOnMethods = "selectRowByEmailsSetup",dataProvider = "emailsProvider")
+     public void selectRowByEmail(String firstName,String email) {
+        Row row = table.getRow(new Cell(2, firstName),new Cell(4,email));
+        CheckBox checkbox = new CheckBox(row);
+        checkbox.click();
+
+
+    }
+    @DataProvider
+    public static Object[][] emailsProvider(){
+             return new Object[][]{
+                     {"Nick","nickwhite@mail.com"},
+                     {"David","davidmiller@mail.com"},
+                     {"Peter","peterparker@mail.com"},
+
+
+             };
     }
 }
 
