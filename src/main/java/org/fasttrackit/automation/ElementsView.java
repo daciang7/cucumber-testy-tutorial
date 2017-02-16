@@ -27,4 +27,6 @@ public class ElementsView{
         System.out.println(test.stopProcessCheckbox.getSelector());
         System.out.println(test.labelWithEnterCheckbox.getSelector());
     }
+
+
 }
