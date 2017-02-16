@@ -27,12 +27,11 @@ public class TablesTest extends TestBase {
     Table table = new Table();
 
     @Test
+
     public void selectRowByEmail() {
 
         openLoginPage();
         loginView.login("eu@fast.com", "eu.pass");
-
-
         //find row that contaains specified email in second column
         Row row = table.getRow(new Cell(4, "davidmiller@mail.com"));
         //find remove button inside specified
@@ -40,6 +39,15 @@ public class TablesTest extends TestBase {
         // WebLocator  checkbox=new WebLocator().setTag("input");
         CheckBox checkbox = new CheckBox(row);
         checkbox.click();
+
+        WebLocator tableLocator= new WebLocator().setTag("table");
+        WebLocator firstNameLocator = new WebLocator().setText("Bob");
+        WebLocator lastNameLocator = new WebLocator().setText("Smith");
+        WebLocator rowLocator = new WebLocator().setTag("tr").setChildNodes(firstNameLocator,lastNameLocator);
+        WebLocator checkboxLocator = new WebLocator().setContainer(rowLocator).setTag("input");
+        checkboxLocator.click();
+
+
     }
 }
 
